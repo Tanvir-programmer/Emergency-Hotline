@@ -1,19 +1,26 @@
 const cardsContainer = document.querySelector(".grid.grid-cols-3");
 
 const heartCountElement = document.getElementById("heart-count");
+const copyCountElement = document.getElementById("copy-count");
 
 let heartCount = 0;
+let copyCount = 0;
 
 cardsContainer.addEventListener("click", (event) => {
   if (event.target.classList.contains("fa-heart")) {
     heartCount++;
     heartCountElement.textContent = heartCount;
   }
+  if (event.target.classList.contains("btn-copy")) {
+    copyCount++;
+    copyCountElement.textContent = copyCount;
+  }
 });
+
 // coin count
 
 const availableCoin = parseInt(document.getElementById("coin-count").innerText);
-// call button functionallity
+// call button functionality
 // card-1
 document.getElementById("callBtn-1").addEventListener("click", function () {
   let availableCoin = parseInt(document.getElementById("coin-count").innerText);
