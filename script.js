@@ -1,18 +1,25 @@
-const cardsContainer = document.querySelector(".grid.grid-cols-3");
-
 const heartCountElement = document.getElementById("heart-count");
 const copyCountElement = document.getElementById("copy-count");
-
 let heartCount = 0;
 let copyCount = 0;
 
-cardsContainer.addEventListener("click", (event) => {
-  if (event.target.classList.contains("fa-heart")) {
-    heartCount++;
-    heartCountElement.textContent = heartCount;
-  }
-  if (event.target.classList.contains("btn-copy")) {
-    alert("Copied");
+// Event delegation for copy buttons
+document.addEventListener("click", function (event) {
+  if (
+    event.target.classList.contains("btn-copy") ||
+    event.target.closest(".btn-copy")
+  ) {
+    const btn = event.target.closest(".btn-copy");
+    const card = btn.closest(".card");
+
+    const numberElem = card.querySelector("h1[id^='number-']");
+    if (!numberElem) return;
+    const number = numberElem.innerText;
+    // copy number to clipboard
+    navigator.clipboard.writeText(number).then(() => {
+      alert("Copied: " + number);
+    });
+    // increase copy count
     copyCount++;
     copyCountElement.textContent = copyCount;
   }

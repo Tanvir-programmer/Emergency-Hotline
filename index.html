@@ -23,27 +23,41 @@
   <body class="font-hind overflow-x-hidden">
     <!-- header section starts here  -->
     <div
-      class="max-w-[1200px] w-full mx-auto h-[100px] flex justify-between items-center"
+      class="max-w-[1200px] w-full mx-auto px-2 sm:px-4 py-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4"
     >
-      <div class="flex items-center gap-2">
-        <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="" />
-        <h1 class="text-2xl font-bold text-[#006747]">
-          Emergency <br />Service
+      <div class="flex items-center gap-2 justify-center sm:justify-start">
+        <img
+          class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px]"
+          src="./assets/logo.png"
+          alt=""
+        />
+        <h1 class="text-xl sm:text-2xl font-bold text-[#006747] leading-tight">
+          Emergency <span class="hidden sm:inline"><br /></span>Service
         </h1>
       </div>
-      <div class="flex items-center gap-8">
+      <div
+        class="flex items-center gap-4 sm:gap-8 justify-center sm:justify-end flex-wrap"
+      >
         <div
-          class="flex gap-1 bg-[#cfe9d5] bg-opacity-100 pl-4 pr-4 pt-2 pb-2 rounded-[50px]"
+          class="flex gap-1 bg-[#cfe9d5] bg-opacity-100 pl-3 pr-3 pt-2 pb-2 rounded-[50px]"
         >
           <span id="heart-count">0</span>
-          <img class="w-[22px] h-[22px]" src="./assets/heart.png" alt="" />
+          <img
+            class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]"
+            src="./assets/heart.png"
+            alt=""
+          />
         </div>
-        <div class="flex gap-1 bg-[#cfe9d5] pl-4 pr-4 pt-2 pb-2 rounded-[50px]">
+        <div class="flex gap-1 bg-[#cfe9d5] pl-3 pr-3 pt-2 pb-2 rounded-[50px]">
           <span id="coin-count">100</span>
-          <img class="w-[22px] h-[22px]" src="./assets/coin.png" alt="" />
+          <img
+            class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]"
+            src="./assets/coin.png"
+            alt=""
+          />
         </div>
         <button
-          class="btn btn-active btn-success text-white rounded-[50px] bg-green-600"
+          class="btn btn-active btn-success text-white rounded-[50px] bg-green-600 min-w-[70px]"
         >
           <span id="copy-count">0</span> copy
         </button>
@@ -51,25 +65,31 @@
     </div>
     <!-- banner section starts here  -->
     <div
-      class="h-[250px] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col justify-center items-center w-full"
+      class="min-h-[180px] sm:h-[250px] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col justify-center items-center w-full px-2 text-center"
     >
-      <img class="w-[55px] h-[55px]" src="./assets/logo-dark.png" alt="" />
-      <h1 class="font-bold text-white text-2xl mb-3 mt-2">
+      <img
+        class="w-[40px] h-[40px] sm:w-[55px] sm:h-[55px]"
+        src="./assets/logo-dark.png"
+        alt=""
+      />
+      <h1 class="font-bold text-white text-lg sm:text-2xl mb-2 sm:mb-3 mt-2">
         Emergency Service Directory
       </h1>
-      <p class="text-white font-bold">
+      <p class="text-white font-bold text-xs sm:text-base max-w-[95vw]">
         Government Emergency Services at Your Fingertip – A Project by
         Government of the People’s Republic of Bangladesh
       </p>
     </div>
     <!-- main body section starts here -->
     <div
-      class="bg-[#f5fff6] max-w-[1200px] w-full mx-auto pt-5 grid grid-cols-4 gap-8"
+      class="bg-[#f5fff6] max-w-[1200px] w-full mx-auto pt-5 grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8"
     >
-      <div class="col-span-3 grid grid-cols-3 gap-8">
+      <div
+        class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
+      >
         <!-- card 1 -->
         <div
-          class="card p-5 rounded-[12px] bg-white w-[300px] h-[240px] shadow-md"
+          class="card p-4 sm:p-5 rounded-[12px] bg-white w-full min-h-[200px] shadow-md flex flex-col justify-between"
         >
           <div class="flex justify-between items-center">
             <img
@@ -87,13 +107,13 @@
             >All</span
           >
 
-          <div class="flex justify-between gap-1">
-            <button class="btn btn-wide w-[130px] btn-copy">
+          <div class="flex flex-col sm:flex-row gap-2 w-full">
+            <button class="btn btn-wide w-full sm:w-1/2 btn-copy flex-1">
               <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               id="callBtn-1"
-              class="btn btn-wide w-[130px] bg-green-600 text-white"
+              class="btn btn-wide w-full sm:w-1/2 bg-green-600 text-white flex-1"
             >
               <i class="fa-solid fa-phone"></i> Call
             </button>
@@ -101,7 +121,7 @@
         </div>
         <!-- card 2 -->
         <div
-          class="card p-5 rounded-[12px] bg-white w-[300px] h-[240px] shadow-md"
+          class="card p-4 sm:p-5 rounded-[12px] bg-white w-full min-h-[200px] shadow-md flex flex-col justify-between"
         >
           <div class="flex justify-between items-center">
             <img class="w-[32px] h-[32px]" src="./assets/police.png" alt="" />
@@ -115,13 +135,13 @@
             >Police</span
           >
 
-          <div class="flex justify-between gap-1">
-            <button class="btn btn-wide w-[130px] btn-copy">
+          <div class="flex flex-col sm:flex-row gap-2 w-full">
+            <button class="btn btn-wide w-full sm:w-1/2 btn-copy flex-1">
               <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               id="callBtn-2"
-              class="btn btn-wide w-[130px] bg-green-600 text-white"
+              class="btn btn-wide w-full sm:w-1/2 bg-green-600 text-white flex-1"
             >
               <i class="fa-solid fa-phone"></i> Call
             </button>
@@ -129,7 +149,7 @@
         </div>
         <!-- card 3  -->
         <div
-          class="card p-5 rounded-[12px] bg-white w-[300px] h-[240px] shadow-md"
+          class="card p-4 sm:p-5 rounded-[12px] bg-white w-full min-h-[200px] shadow-md flex flex-col justify-between"
         >
           <div class="flex justify-between items-center">
             <img
@@ -147,13 +167,13 @@
             >Fire</span
           >
 
-          <div class="flex justify-between gap-1">
-            <button class="btn btn-wide w-[130px] btn-copy">
+          <div class="flex flex-col sm:flex-row gap-2 w-full">
+            <button class="btn btn-wide w-full sm:w-1/2 btn-copy flex-1">
               <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               id="callBtn-3"
-              class="btn btn-wide w-[130px] bg-green-600 text-white"
+              class="btn btn-wide w-full sm:w-1/2 bg-green-600 text-white flex-1"
             >
               <i class="fa-solid fa-phone"></i> Call
             </button>
@@ -161,7 +181,7 @@
         </div>
         <!-- card 4  -->
         <div
-          class="card p-5 rounded-[12px] bg-white w-[300px] h-[240px] shadow-md"
+          class="card p-4 sm:p-5 rounded-[12px] bg-white w-full min-h-[200px] shadow-md flex flex-col justify-between"
         >
           <div class="flex justify-between items-center">
             <img
@@ -179,13 +199,13 @@
             >Health</span
           >
 
-          <div class="flex justify-between gap-1">
-            <button class="btn btn-wide w-[130px] btn-copy">
+          <div class="flex flex-col sm:flex-row gap-2 w-full">
+            <button class="btn btn-wide w-full sm:w-1/2 btn-copy flex-1">
               <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               id="callBtn-4"
-              class="btn btn-wide w-[130px] bg-green-600 text-white"
+              class="btn btn-wide w-full sm:w-1/2 bg-green-600 text-white flex-1"
             >
               <i class="fa-solid fa-phone"></i> Call
             </button>
@@ -193,7 +213,7 @@
         </div>
         <!-- card 5 -->
         <div
-          class="card p-5 rounded-[12px] bg-white w-[300px] h-[240px] shadow-md"
+          class="card p-4 sm:p-5 rounded-[12px] bg-white w-full min-h-[200px] shadow-md flex flex-col justify-between"
         >
           <div class="flex justify-between items-center">
             <img
@@ -211,13 +231,13 @@
             >Help</span
           >
 
-          <div class="flex justify-between gap-1">
-            <button class="btn btn-wide w-[130px] btn-copy">
+          <div class="flex flex-col sm:flex-row gap-2 w-full">
+            <button class="btn btn-wide w-full sm:w-1/2 btn-copy flex-1">
               <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               id="callBtn-5"
-              class="btn btn-wide w-[130px] bg-green-600 text-white"
+              class="btn btn-wide w-full sm:w-1/2 bg-green-600 text-white flex-1"
             >
               <i class="fa-solid fa-phone"></i> Call
             </button>
@@ -225,7 +245,7 @@
         </div>
         <!-- card 6  -->
         <div
-          class="card p-5 rounded-[12px] bg-white w-[300px] h-[240px] shadow-md"
+          class="card p-4 sm:p-5 rounded-[12px] bg-white w-full min-h-[200px] shadow-md flex flex-col justify-between"
         >
           <div class="flex justify-between items-center">
             <img
@@ -243,13 +263,13 @@
             >Govt.</span
           >
 
-          <div class="flex justify-between gap-1">
-            <button class="btn btn-wide w-[130px] btn-copy">
+          <div class="flex flex-col sm:flex-row gap-2 w-full">
+            <button class="btn btn-wide w-full sm:w-1/2 btn-copy flex-1">
               <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               id="callBtn-6"
-              class="btn btn-wide w-[130px] bg-green-600 text-white"
+              class="btn btn-wide w-full sm:w-1/2 bg-green-600 text-white flex-1"
             >
               <i class="fa-solid fa-phone"></i> Call
             </button>
@@ -257,7 +277,7 @@
         </div>
         <!-- card 7 -->
         <div
-          class="card p-5 rounded-[12px] bg-white w-[300px] h-[240px] shadow-md"
+          class="card p-4 sm:p-5 rounded-[12px] bg-white w-full min-h-[200px] shadow-md flex flex-col justify-between"
         >
           <div class="flex justify-between items-center">
             <img
@@ -275,13 +295,13 @@
             >Electricity</span
           >
 
-          <div class="flex justify-between gap-1">
-            <button class="btn btn-wide w-[130px] btn-copy">
+          <div class="flex flex-col sm:flex-row gap-2 w-full">
+            <button class="btn btn-wide w-full sm:w-1/2 btn-copy flex-1">
               <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               id="callBtn-7"
-              class="btn btn-wide w-[130px] bg-green-600 text-white"
+              class="btn btn-wide w-full sm:w-1/2 bg-green-600 text-white flex-1"
             >
               <i class="fa-solid fa-phone"></i> Call
             </button>
@@ -289,7 +309,7 @@
         </div>
         <!-- card 8 -->
         <div
-          class="card p-5 rounded-[12px] bg-white w-[300px] h-[240px] shadow-md"
+          class="card p-4 sm:p-5 rounded-[12px] bg-white w-full min-h-[200px] shadow-md flex flex-col justify-between"
         >
           <div class="flex justify-between items-center">
             <img
@@ -307,13 +327,13 @@
             >NGO</span
           >
 
-          <div class="flex justify-between gap-1">
-            <button class="btn btn-wide w-[130px] btn-copy">
+          <div class="flex flex-col sm:flex-row gap-2 w-full">
+            <button class="btn btn-wide w-full sm:w-1/2 btn-copy flex-1">
               <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               id="callBtn-8"
-              class="btn btn-wide w-[130px] bg-green-600 text-white"
+              class="btn btn-wide w-full sm:w-1/2 bg-green-600 text-white flex-1"
             >
               <i class="fa-solid fa-phone"></i> Call
             </button>
@@ -321,7 +341,7 @@
         </div>
         <!-- card 9  -->
         <div
-          class="card p-5 rounded-[12px] bg-white w-[300px] h-[240px] shadow-md"
+          class="card p-4 sm:p-5 rounded-[12px] bg-white w-full min-h-[200px] shadow-md flex flex-col justify-between"
         >
           <div class="flex justify-between items-center">
             <img
@@ -339,13 +359,13 @@
             >Travel</span
           >
 
-          <div class="flex justify-between gap-1">
-            <button class="btn btn-wide w-[130px] btn-copy">
+          <div class="flex flex-col sm:flex-row gap-2 w-full">
+            <button class="btn btn-wide w-full sm:w-1/2 btn-copy flex-1">
               <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               id="callBtn-9"
-              class="btn btn-wide w-[130px] bg-green-600 text-white"
+              class="btn btn-wide w-full sm:w-1/2 bg-green-600 text-white flex-1"
             >
               <i class="fa-solid fa-phone"></i> Call
             </button>
@@ -354,20 +374,25 @@
       </div>
       <!-- transection section  -->
       <div
-        class="bg-white w-[300px] h-[780px] col-span-1 row-span-3 flex flex-col rounded-md shadow-md"
+        class="bg-white w-full md:w-[300px] h-[300px] md:h-[862px] col-span-1 row-span-3 flex flex-col rounded-md shadow-md order-last md:order-none mt-4 md:mt-0"
       >
-        <div class="flex justify-between items-center p-4">
-          <h2 class="font-semibold">
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center p-4 gap-2 sm:gap-0 h-auto"
+        >
+          <h2 class="font-semibold text-base sm:text-lg">
             <i class="fa-solid fa-clock-rotate-left"></i> Call History
           </h2>
           <button
             id="clear-btn"
-            class="btn btn-success bg-green-600 text-white w-[100px] rounded-[50px]"
+            class="btn btn-success bg-green-600 text-white w-[80px] sm:w-[100px] rounded-[50px]"
           >
             Clear
           </button>
         </div>
-        <div id="transaction-list" class="px-4 pb-4 flex-1 overflow-y-auto">
+        <div
+          id="transaction-list"
+          class="px-2 sm:px-4 pb-4 flex-1 overflow-y-auto text-sm"
+        >
           <!-- Transactions will be appended here -->
         </div>
       </div>
