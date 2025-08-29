@@ -3,25 +3,33 @@ const copyCountElement = document.getElementById("copy-count");
 let heartCount = 0;
 let copyCount = 0;
 
-// Event delegation for copy buttons
+// Event delegation for copy and heart buttons
 document.addEventListener("click", function (event) {
+  // Copy button logic
   if (
     event.target.classList.contains("btn-copy") ||
     event.target.closest(".btn-copy")
   ) {
     const btn = event.target.closest(".btn-copy");
     const card = btn.closest(".card");
-
     const numberElem = card.querySelector("h1[id^='number-']");
     if (!numberElem) return;
     const number = numberElem.innerText;
-    // copy number to clipboard
     navigator.clipboard.writeText(number).then(() => {
       alert("Copied: " + number);
     });
-    // increase copy count
     copyCount++;
     copyCountElement.textContent = copyCount;
+    return;
+  }
+  // Heart icon logic
+  if (
+    event.target.classList.contains("fa-heart") &&
+    event.target.closest(".card")
+  ) {
+    heartCount++;
+    heartCountElement.textContent = heartCount;
+    event.target.classList.toggle("text-red-500");
   }
 });
 
